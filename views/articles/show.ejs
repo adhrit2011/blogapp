@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>BlogApp</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 mt-4 text-center">Current Article</h1>
+        <h3 class="mb-4 mt-4"><%=article.title%></h3>
+        
+        <div class="text-muted"><%=article.createdAt.toLocaleDateString()%></div>
+        <p><%=article.description%></p>
+        <div class="mt-2">
+            <%=article.markdown%>
+        </div>
+        
+        <a href="/" class="btn btn-secondary">All Articles</a>
+        <a href="/articles/edit/<%=article.id%>" class="btn btn-primary">Edit</a>
+
+    </div>
+</body>
+</html>
